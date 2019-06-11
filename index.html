@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta content="width=device-with, initial-scale=1;">
+	<style type="text/css">
+		.delete{
+			background-color:rgb(255,150,150);
+		}
+
+		.back{
+			background-color:rgb(255,150,150);
+
+		}
+
+		.screen{
+
+			background-color: #586352;
+			width: 225px !important;
+			border:;
+			font-family:default;
+			font-size: 18px;
+			color:black;
+		}
+
+		.igual{
+			background-color: #23806e;
+			width: 170px;
+		}
+
+		input{
+
+			width: 50px;
+			height: 50px;
+			margin: 3px;
+			border-radius: 10px;
+			color:white;
+			background-color:black;
+			outline: none; 
+		}
+
+		.calculadora{
+
+			border-radius: 10px;
+			width: 236px;
+			background-color:#abcedf;
+			padding: 12px;
+			border: 5px solid grey;
+			margin: 0 auto;
+			box-shadow: 15px 10px  30px 0px rgba(0,0,0,0.6);
+
+		}
+
+		@font-face{
+
+	font-family: PressStart2P-Regular;
+	src:url('PressStart2P-Regular.ttf');
+}
+
+body{
+	color: white !important;
+	background: url('bg.jpg') no-repeat;
+}
+
+.box{
+
+	margin-top: 150px;
+}
+	</style>
+
+</head>
+<body>
+	
+	<div class="box">	
+		<div class="calculadora">
+		<form name="frm">
+			<input type="input" name="result" class="screen" placeholder="0">
+			<br>
+				<input type="button" name="ac" value="AC" onclick="frm.result.value =''" class="delete">
+				<input type="button" name="ce" value="CE" onclick="back()" class="back">
+				<input type="button" name="/" value="/" onclick="divide()">
+				<input type="button" name="*" value="*" onclick="multp()">
+			<br>
+				<input type="button" name="7" value="7" onclick="run()">
+				<input type="button" name="8" value="8" onclick="run1()">
+				<input type="button" name="9" value="9" onclick="run2()">
+				<input type="button" name="minus" value="-" onclick="run00()">
+				
+			<br>
+			 	<input type="button" name="4" value="4" onclick="run3()">
+				<input type="button" name="5" value="5" onclick="run4()">
+				<input type="button" name="6" value="6" onclick="run5()">
+				<input type="button" name="+" value="+" onclick="plus()">
+			<br>
+			 	<input type="button" name="1" value="1" onclick="run6()">
+				<input type="button" name="2" value="2" onclick="run7()">
+				<input type="button" name="3" value="3" onclick="run8()">
+				<input type="button" name="." value="." onclick="dot()">
+			<br>
+
+
+
+				<input type="button" name="0" value="0" onclick="run0()">
+				<input type="button" name="=" value="=" onclick=" frm.result.value = eval(frm.result.value)" class="igual"></form>
+		</div>
+</div>
+		<script type="text/javascript">
+			function back() {document.frm.result.value =frm.result.value.slice(0,-1);}
+			function divide() {document.frm.result.value += "/";}
+			function multp() {document.frm.result.value += "*";}
+			function plus() {document.frm.result.value += "+";}
+			function run00() {document.frm.result.value += "-";}
+			function run() {document.frm.result.value += "7";}
+			function run1() {document.frm.result.value += "8";}
+			function run2() {document.frm.result.value += "9";}
+			function run3() {document.frm.result.value += "4";}
+			function run4() {document.frm.result.value += "5";}
+			function run5() {document.frm.result.value += "6";}
+			function run6() {document.frm.result.value += "1";}
+			function run7() {document.frm.result.value += "2";}
+			function run8() {document.frm.result.value += "3";}
+			function run0() {document.frm.result.value += "0";}
+			function dot() {document.frm.result.value += ".";}
+		</script>
+</body>
+</html>
